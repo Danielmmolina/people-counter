@@ -3,64 +3,50 @@
     <!-- Titulo -->
     <div class="d-flex text-light fs-1 mt-5 justify-content-between">
       <p>Contador manual <br />de personas</p>
-      <span class="d-none d-md-block"
-        ><br />________________________________________________</span
-      >
+      <span class="d-none d-md-block"><br />________________________________________________</span>
     </div>
 
     <div class="container mt-5">
-      <div class="row">
-        <div class="col-12 col-md-4 mb-4">
-          <div class="card custom-card">
-            <div class="card-body text-center mt-3 text-light">
-              <h2 class="fs-2 fw-light">Personas que han ingresado</h2>
-              <div class="position-absolute top-50 start-50 translate-middle">
-                <h1 class="display-1 fw-semibold txt-number">
-                  {{ counterStore.count }}
-                </h1>
+      <div class="row justify-content-center">
+            <div class="card custom-card">
+              <div class="card-body text-center mt-3 text-light">
+                <h2 class="fs-2 fw-light">Personas que han ingresado</h2>
+                <div class="position-absolute top-50 start-50 translate-middle">
+                  <h1 class="display-1 fw-semibold txt-number">
+                    {{ counterStore.count }}
+                  </h1>
+                </div>
               </div>
-            </div>
-            <div
-              class="position-absolute top-100 start-50 translate-middle d-flex w-75 justify-content-between"
-            >
-              <button
-                class="btn rounded-circle custom-btn btn-lg text-light"
-                @click="addCount(1)"
-              >
-                +1
-              </button>
-              <button
-                class="btn rounded-circle custom-btn btn-lg text-light"
-                @click="subCount(1)"
-              >
-                -1
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-4 mb-4">
-          <div class="card custom-card">
-            <div class="card-body text-center mt-3 text-light">
-              <h2 class="fs-2 fw-light">Personas que han ingresado</h2>
-              <div class="position-absolute top-50 start-50 translate-middle">
-                <h1 class="display-1 fw-semibold txt-number">
-                  {{ counterStore.count_in }}
-                </h1>
+              <div class="position-absolute top-100 start-50 translate-middle d-flex w-75 justify-content-between">
+                <button class="btn rounded-circle custom-btn btn-lg text-light" style="width: 60px; height: 60px;"
+                  @click="addCount(1)">
+                  +1
+                </button>
+                <button class="btn rounded-circle custom-btn btn-lg text-light" style="width: 60px; height: 60px;"
+                  @click="subCount(1)">
+                  -1
+                </button>
               </div>
-            </div>
           </div>
-        </div>
-        <div class="col-12 col-md-4 mb-4">
-          <div class="card custom-card">
-            <div class="card-body text-center mt-3 text-light">
-              <h2 class="fs-2 fw-light">Personas que han salido</h2>
-              <div class="position-absolute top-50 start-50 translate-middle">
-                <h1 class="display-1 fw-semibold txt-number">
-                  {{ counterStore.count_out }}
-                </h1>
+            <div class="card custom-card">
+              <div class="card-body text-center mt-3 text-light">
+                <h2 class="fs-2 fw-light">Personas que han ingresado</h2>
+                <div class="position-absolute top-50 start-50 translate-middle">
+                  <h1 class="display-1 fw-semibold txt-number">
+                    {{ counterStore.count_in }}
+                  </h1>
+                </div>
               </div>
-            </div>
           </div>
+            <div class="card custom-card">
+              <div class="card-body text-center mt-3 text-light">
+                <h2 class="fs-2 fw-light">Personas que han salido</h2>
+                <div class="position-absolute top-50 start-50 translate-middle">
+                  <h1 class="display-1 fw-semibold txt-number">
+                    {{ counterStore.count_out }}
+                  </h1>
+                </div>
+              </div>
         </div>
       </div>
     </div>
@@ -110,9 +96,11 @@ onUnmounted(() => {
 .custom-div {
   margin-top: 5rem;
 }
+
 .custom-card {
   height: 25rem;
   width: 20rem;
+  margin: 10px;
   border-radius: 30px;
   background-color: #203364;
 }
